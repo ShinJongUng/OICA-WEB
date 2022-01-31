@@ -5,7 +5,7 @@
         class="navbar-brand"
         href="#">
         <img
-          src="~/assets/logo.png"
+          src="src\assets\logo.png"
           alt=""
           width="250" /></a>
       <!-- mediaquery 반응형 버튼 -->
@@ -214,15 +214,20 @@
 </script>
 
 <style scoped lang="scss">
+  
   .dropdown{
-    padding-left: 30px;
+    padding-left: 25px;
+    &:first-child.dropdown{
+      padding-left: 40px;
+    }
     .nav-item{
     padding-left: 10px;
     }
   }
+  
 
   .come-to-school{
-    padding-left: 30px;
+    padding-left: 25px;
   }
   
 </style>
