@@ -1,13 +1,14 @@
 <template>
-  <h1>메인임</h1>
+  <HomeSwiper />
 </template>
 
 <script>
 
+import HomeSwiper from  '~/components/HomeSwiper'
 
 export default {
   components: {
-
+    HomeSwiper
   }
 }
 </script>
