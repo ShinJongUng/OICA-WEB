@@ -5,7 +5,7 @@
         class="navbar-brand"
         href="#">
         <img
-          src="../assets/logo.png"
+          src="~/assets/logo.png"
           alt=""
           width="250" /></a>
       <!-- mediaquery 반응형 버튼 -->
