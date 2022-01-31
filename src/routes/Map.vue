@@ -1,0 +1,3 @@
+<template>
+  <h1>오시는 길</h1>
+</template>

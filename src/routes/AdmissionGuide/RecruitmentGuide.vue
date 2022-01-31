@@ -1,0 +1,3 @@
+<template>
+  <h1>모집 요강</h1>
+</template>
