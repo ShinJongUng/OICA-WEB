@@ -18,7 +18,7 @@ import RecruitmentGuide from './AdmissionGuide/RecruitmentGuide'
 import NoticeBoard from './SchoolStory/NoticeBoard'
 import SchoolActivities from './SchoolStory/SchoolActivities'
 import SchoolNews from './SchoolStory/SchoolNews'
-//map Page
+//roadMap Page
 import RoadMap from './Map.vue'
 
 
