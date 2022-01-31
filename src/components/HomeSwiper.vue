@@ -26,7 +26,7 @@
     </swiper-slide>
     <swiper-slide>
       <img
-        src="../assets/swiper/swiper2.gif"
+        src="../assets/swiper/swiper2.png"
         alt=""
         class="swiper-img" />
     </swiper-slide>
