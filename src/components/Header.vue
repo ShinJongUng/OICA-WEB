@@ -5,7 +5,7 @@
         class="navbar-brand"
         href="#">
         <img
-          src="src\assets\logo.png"
+          src="../assets/logo_header.png"
           alt=""
           width="250" /></a>
       <!-- mediaquery 반응형 버튼 -->
@@ -217,9 +217,6 @@
   
   .dropdown{
     padding-left: 25px;
-    &:first-child.dropdown{
-      padding-left: 40px;
-    }
     .nav-item{
     padding-left: 10px;
     }
