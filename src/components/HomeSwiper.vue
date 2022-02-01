@@ -166,6 +166,9 @@
         color:white;
       }
     }
+     img{
+      width: 800px;
+    }
   }
 }
 </style>
