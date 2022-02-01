@@ -1,5 +1,5 @@
 <template>
-  <HomeSwiper />
+  <HomeSwiper class="main-swiper" />
 </template>
 
 <script>
@@ -12,3 +12,9 @@ export default {
   }
 }
 </script>
+
+<style scoped lang ="scss">
+  .main-swiper{
+    padding-top: 50px;
+  }
+</style>
