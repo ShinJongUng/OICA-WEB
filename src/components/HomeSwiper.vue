@@ -25,13 +25,13 @@
           data-swiper-parallax="-200">
           Becoming One in Love<br />
           Growing Leaders<br />
-          Helping People to Serve God<br />
+          Helping People to Serve God<br /><br />
+          <div
+            class="subtitle">
+            We Are OICA
+          </div>
         </div>
-        <div
-          class="subtitle"
-          data-swiper-parallax="-100">
-          We Are OICA
-        </div>
+        
         <img
           src="../assets/swiper/swiper1.png"
           alt=""
@@ -43,12 +43,11 @@
           data-swiper-parallax="-200">
           사랑으로 하나되는 학교 <br />
           리더를 세워가는 학교 <br />
-          섬김으로 봉사하는 학교 <br />
-        </div>
-        <div
-          class="subtitle"
-          data-swiper-parallax="-300">
-          우리는 OICA입니다
+          섬김으로 봉사하는 학교 <br /><br />
+          <div
+            class="subtitle">
+            우리는 OICA입니다
+          </div>
         </div>
         <img
           src="../assets/swiper/swiper2.png"
@@ -60,12 +59,11 @@
           class="title"
           data-swiper-parallax="-200">
           Growing Global Leaders<br />
-          in God's Words. 
-        </div>
-        <div
-          class="subtitle"
-          data-swiper-parallax="-300">
-          We Are OICA
+          in God's Words. <br /><br />
+          <div
+            class="subtitle">
+            We Are OICA
+          </div>
         </div>
         <img
           src="../assets/swiper/swiper3.png"
@@ -77,12 +75,11 @@
           class="title"
           data-swiper-parallax="-200">
           하나님 말씀 안에서<br />
-          글로벌 리더 양성
-        </div>
-        <div
-          class="subtitle"
-          data-swiper-parallax="-300">
-          우린 OICA입니다
+          글로벌 리더 양성<br /><br />
+          <div
+            class="subtitle">
+            우린 OICA입니다
+          </div>
         </div>
         <img
           src="../assets/swiper/swiper4.png"
@@ -149,14 +146,26 @@
       top: 30%;
       left: 10%;
       color:white;
+      .subtitle{
+        font-size: 30px;
+        position: absolute;
+        color:white;
+      }
     }
-    .subtitle{
+    @media (max-width: 1000px) {
+      .title{
       font-size: 30px;
       position: absolute;
       z-index: 1;
-      bottom: 20%;
+      top: 30%;
       left: 10%;
       color:white;
+      .subtitle{
+        font-size: 25px;
+        position: absolute;
+        color:white;
+      }
     }
   }
+}
 </style>
