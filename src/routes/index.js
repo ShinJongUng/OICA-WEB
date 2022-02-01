@@ -19,8 +19,9 @@ import NoticeBoard from './SchoolStory/NoticeBoard'
 import SchoolActivities from './SchoolStory/SchoolActivities'
 import SchoolNews from './SchoolStory/SchoolNews'
 //roadMap Page
-import RoadMap from './Map.vue'
-
+import RoadMap from './Map'
+//404 Page
+import NotFound from './NotFound'
 
 export default createRouter({
     //hash mode or history
@@ -88,6 +89,10 @@ export default createRouter({
         {
             path: '/RoadMap',
             component: RoadMap
+        },
+        {
+            path: '/:notFound(.*)',
+            component: NotFound
         }
     ]
 });
