@@ -154,14 +154,13 @@
     }
     @media (max-width: 1000px) {
       .title{
-      font-size: 30px;
+      font-size: 25px;
       position: absolute;
       z-index: 1;
-      top: 30%;
-      left: 10%;
       color:white;
+      left: 15%;
       .subtitle{
-        font-size: 25px;
+        font-size: 20px;
         position: absolute;
         color:white;
       }
