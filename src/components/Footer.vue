@@ -161,7 +161,7 @@
     <div
       class="text-center p-3"
       style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2021 Copyright Onnuri International Christian School. ALL RIGHT RESERVED
+      © 2021 Copyright Onnuri International Christian Academy. ALL RIGHT RESERVED
     </div>
   </footer>
 </template>
