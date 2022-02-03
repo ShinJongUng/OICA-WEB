@@ -15,9 +15,9 @@ import ConsultationInquiry from './AdmissionGuide/ConsultationInquiry'
 import EducationExpenses from './AdmissionGuide/EducationExpenses'
 import RecruitmentGuide from './AdmissionGuide/RecruitmentGuide'
 //fourth Page
-import NoticeBoard from './SchoolStory/NoticeBoard'
-import SchoolActivities from './SchoolStory/SchoolActivities'
-import SchoolNews from './SchoolStory/SchoolNews'
+// import NoticeBoard from './SchoolStory/NoticeBoard'
+// import SchoolActivities from './SchoolStory/SchoolActivities'
+// import SchoolNews from './SchoolStory/SchoolNews'
 //roadMap Page
 import RoadMap from './Map'
 //404 Page
@@ -74,18 +74,18 @@ export default createRouter({
             path: '/AdmissionGuide/RecruitmentGuide',
             component: RecruitmentGuide
         },
-        {
-            path: '/SchoolStory/NoticeBoard',
-            component: NoticeBoard
-        },
-        {
-            path: '/SchoolStory/SchoolActivities',
-            component: SchoolActivities
-        },
-        {
-            path: '/SchoolStory/SchoolNews',
-            component: SchoolNews
-        },
+        // {
+        //     path: '/SchoolStory/NoticeBoard',
+        //     component: NoticeBoard
+        // },
+        // {
+        //     path: '/SchoolStory/SchoolActivities',
+        //     component: SchoolActivities
+        // },
+        // {
+        //     path: '/SchoolStory/SchoolNews',
+        //     component: SchoolNews
+        // },
         {
             path: '/RoadMap',
             component: RoadMap

@@ -1,6 +1,6 @@
 <template>
   <div class="container-md">
-    <div class="come-to">
+    <div class="main-title">
       오시는 길
       <hr />
     </div>
@@ -68,7 +68,7 @@ export default {
   font-family: 'Nanum Gothic', sans-serif;
   margin-top: 60px;
 
-  .come-to{
+  .main-title{
     margin-bottom: 20px;
     font-size: 40px;
     font-weight: 700;

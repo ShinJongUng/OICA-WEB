@@ -12,12 +12,12 @@
       <!-- Section: Text -->
 
       <!-- Section: Links -->
-      <section class="">
+      <section>
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">
+            <h5>
               학교 소개
             </h5>
 
@@ -26,7 +26,7 @@
                 <RouterLink
                   :to="'/SchoolIntroduction/PastorGreeting'"
                   class="text-white nav-link">
-                  이사장 인사말
+                  학교장 인사말
                 </RouterLink>
               </li>
               <li>
@@ -36,13 +36,13 @@
                   학교 연혁
                 </RouterLink>
               </li>
-              <li>
+              <!-- <li>
                 <RouterLink
                   :to="'/SchoolIntroduction/PhilosophyEducation'"
                   class="text-white nav-link">
                   교육 철학
                 </RouterLink>
-              </li>
+              </li> -->
               <li>
                 <RouterLink
                   :to="'/SchoolIntroduction/SchoolFacilities'"
@@ -60,14 +60,14 @@
             </ul>
           </div>
           <!--Grid column-->
-
+  
           <!--Grid column-->
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">
+            <h5>
               교육 정보
             </h5>
 
-            <ul class="list-unstyled mb-0">
+            <!-- <ul class="list-unstyled mb-0">
               <li>
                 <RouterLink
                   :to="'/EducationInfo/AcademicCalendar'"
@@ -84,12 +84,12 @@
               </li>
               <li>
                 <RouterLink
-                  :to="'/AdmissionGuide/RecruitmentGuide'"
+                  :to="'/EducationInfo/RecruitmentGuide'"
                   class="text-white nav-link">
                   입학 FAQ
                 </RouterLink>
               </li>
-            </ul>
+            </ul> -->
           </div>
           <!--Grid column-->
 
@@ -114,13 +114,13 @@
                   교육비 안내
                 </RouterLink>
               </li>
-              <li>
+              <!-- <li>
                 <RouterLink
                   :to="'/AdmissionGuide/ConsultationInquiry'"
                   class="text-white nav-link">
                   상담 문의
                 </RouterLink>
-              </li>
+              </li> -->
             </ul>
           </div>
           <!--Grid column-->
@@ -131,7 +131,7 @@
               국크 이야기
             </h5>
 
-            <ul class="list-unstyled mb-0">
+            <!-- <ul class="list-unstyled mb-0">
               <li>
                 <RouterLink
                   :to="'/SchoolStory/SchoolNews'"
@@ -153,7 +153,7 @@
                   학생 마당
                 </RouterLink>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </section>
@@ -161,12 +161,17 @@
     <div
       class="text-center p-3"
       style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2021 Copyright Onnuri International Christian Academy. ALL RIGHT RESERVED
+      © 2022 Copyright Onnuri International Christian Academy. ALL RIGHT RESERVED
     </div>
   </footer>
 </template>
 
 <style scoped lang="scss">
+  
+  .row {
+    margin: 0 auto;
+  }
+
     li{
         margin-bottom: 5px;
         &:first-child{
@@ -178,7 +183,7 @@
     }
     @media (max-width: 1000px) {
         li{
-            margin-bottom: 0px;
+            margin-bottom: 10px;
         }
     }
 </style>

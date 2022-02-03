@@ -110,11 +110,9 @@
       SwiperSlide,
     },
     setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
+      const onSwiper = () => {
       };
       const onSlideChange = () => {
-        console.log('slide change');
       };
       return {
         onSwiper,

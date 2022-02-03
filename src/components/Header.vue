@@ -146,17 +146,17 @@
       return {
         first_menu: [
           {
-            name: '이사장 인사말',
+            name: '학교장 인사말',
             href: '/SchoolIntroduction/PastorGreeting'
           },
           {
             name: '학교 연혁',
             href: '/SchoolIntroduction/SchoolHistory'
           },
-          {
-            name: '교육 철학',
-            href: '/SchoolIntroduction/PhilosophyEducation'
-          },
+          // {
+          //   name: '교육 철학',
+          //   href: '/SchoolIntroduction/PhilosophyEducation'
+          // },
           {
             name: '교직원 소개',
             href: '/SchoolIntroduction/TeacherIntroduction'
@@ -167,17 +167,21 @@
           }
         ],
         second_menu: [
-          {
-            name: '학사 일정',
-            href: '/EducationInfo/AcademicCalendar'
-          },
-          {
-            name: '커리큘럼',
-            href: '/EducationInfo/Curriculum'
-          },
-          {
-            name: '입학 FAQ',
-            href: '/EducationInfo/AdmissionFAQ'
+          // {
+          //   name: '학사 일정',
+          //   href: '/EducationInfo/AcademicCalendar'
+          // },
+          // {
+          //   name: '커리큘럼',
+          //   href: '/EducationInfo/Curriculum'
+          // },
+          // {
+          //   name: '입학 FAQ',
+          //   href: '/EducationInfo/AdmissionFAQ'
+          // }
+           {
+            name: '준비중 입니다.',
+            href: ""
           }
         ],
         third_menu: [
@@ -189,23 +193,27 @@
             name: '교육비 안내',
             href: '/AdmissionGuide/EducationExpenses'
           },
-          {
-            name: '상담 문의',
-            href: '/AdmissionGuide/ConsultationInquiry'
-          }
+          // {
+          //   name: '상담 문의',
+          //   href: '/AdmissionGuide/ConsultationInquiry'
+          // }
         ],
           fourth_menu: [
+          // {
+          //   name: '학교 소식',
+          //   href: '/SchoolStory/SchoolNews'
+          // },
+          // {
+          //   name: '학교 활동',
+          //   href: '/SchoolStory/SchoolActivities'
+          // },
+          // {
+          //   name: '학생 마당',
+          //   href: '/SchoolStory/NoticeBoard'
+          // }
           {
-            name: '학교 소식',
-            href: '/SchoolStory/SchoolNews'
-          },
-          {
-            name: '학교 활동',
-            href: '/SchoolStory/SchoolActivities'
-          },
-          {
-            name: '학생 마당',
-            href: '/SchoolStory/NoticeBoard'
+            name: '준비중 입니다.',
+            href: ""
           }
         ]
       }
