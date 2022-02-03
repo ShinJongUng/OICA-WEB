@@ -180,7 +180,7 @@
           //   href: '/EducationInfo/AdmissionFAQ'
           // }
            {
-            name: '준비중 입니다.',
+            name: '준비 중 입니다.',
             href: ""
           }
         ],
@@ -212,7 +212,7 @@
           //   href: '/SchoolStory/NoticeBoard'
           // }
           {
-            name: '준비중 입니다.',
+            name: '준비 중 입니다.',
             href: ""
           }
         ]

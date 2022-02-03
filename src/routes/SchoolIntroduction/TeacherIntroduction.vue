@@ -8,7 +8,7 @@
     <div class="block">
       <div class="card">
         <div class="card-header">
-          교장(principal)
+          교장<span class="eng-head">(principal)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -23,7 +23,7 @@
     <div class="block">
       <div class="card">
         <div class="card-header">
-          교감(Vice-Principal)
+          교감<span class="eng-head">(Vice-Principal)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -38,7 +38,7 @@
     <div class="block">
       <div class="card">
         <div class="card-header">
-          국어 선생님(Korean teacher)
+          국어 선생님<span class="eng-head">(Korean teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -48,7 +48,7 @@
       </div>
       <div class="card">
         <div class="card-header">
-          수학 선생님(Math teacher)
+          수학 선생님<span class="eng-head">(Math teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -58,7 +58,7 @@
       </div>
       <div class="card">
         <div class="card-header">
-          과학 선생님(Science teacher)
+          과학 선생님<span class="eng-head">(Science teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -70,7 +70,7 @@
     <div class="block">
       <div class="card">
         <div class="card-header">
-          영어 선생님(English teacher)
+          영어 선생님<span class="eng-head">(English teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -80,7 +80,7 @@
       </div>
       <div class="card">
         <div class="card-header">
-          영어 선생님(English teacher)
+          영어 선생님<span class="eng-head">(English teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -90,7 +90,7 @@
       </div>
       <div class="card">
         <div class="card-header">
-          미술 선생님(Art teacher)
+          미술 선생님<span class="eng-head">(Art teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -102,7 +102,7 @@
     <div class="block">
       <div class="card">
         <div class="card-header">
-          컴퓨터 선생님(Computer teacher)
+          컴퓨터 선생님<span class="eng-head">(Computer teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -112,7 +112,7 @@
       </div>
       <div class="card">
         <div class="card-header">
-          도덕 선생님(Ethics teacher)
+          도덕 선생님<span class="eng-head">(Ethics teacher)</span>
         </div>
         <div class="card-body">
           <h5 class="card-title">
@@ -159,6 +159,9 @@
       }
     }
     @media (max-width: 1000px) {
+      .eng-head{
+        display: none;
+      }
     }
   }
   
