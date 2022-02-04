@@ -134,6 +134,34 @@
               오시는 길
             </RouterLink>
           </li>
+
+          <li
+            class="nav-item login"
+            v-if="user == null">
+            <RouterLink
+              to="/auth/Register"
+              class="nav-link">
+              회원가입
+            </RouterLink>
+            <RouterLink
+              to="/auth/login"
+              class="nav-link">
+              로그인
+            </RouterLink>
+          </li>
+          <li
+            class="nav-item login"
+            v-else>
+            <div class="user_name nav-link">
+              이름 님
+            </div>
+            <RouterLink
+              to="/"
+              class="nav-link"
+              @click="signOut()">
+              로그아웃
+            </RouterLink>
+          </li>
         </ul>
       </div>
     </div>
@@ -141,6 +169,8 @@
 </template> 
 
 <script>
+import { useRouter } from 'vue-router'
+import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
   export default {
     data() {
       return {
@@ -179,7 +209,7 @@
           //   name: '입학 FAQ',
           //   href: '/EducationInfo/AdmissionFAQ'
           // }
-           {
+          {
             name: '준비 중 입니다.',
             href: ""
           }
@@ -199,10 +229,10 @@
           // }
         ],
           fourth_menu: [
-          // {
-          //   name: '학교 소식',
-          //   href: '/SchoolStory/SchoolNews'
-          // },
+          {
+            name: '학교 소식',
+            href: '/SchoolStory/SchoolNews'
+          },
           // {
           //   name: '학교 활동',
           //   href: '/SchoolStory/SchoolActivities'
@@ -211,14 +241,35 @@
           //   name: '학생 마당',
           //   href: '/SchoolStory/NoticeBoard'
           // }
-          {
-            name: '준비 중 입니다.',
-            href: ""
-          }
-        ]
+        ],
+        user:null
       }
+    },
+    created() {
+      onAuthStateChanged(getAuth(), (user) => {
+      if (user) {
+      this.user = user
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+    // ...
+      } else {
+      this.user = null;
+    // User is signed out
+    // ...
+        }
+      });
+    },
+    methods: {
+      signOut(){
+        signOut(getAuth()).then(() => {
+          this.$router.go();
+        }).catch((error) => {
+          console.log(error)
+      });
     }
   }
+}
 </script>
 
 <style scoped lang="scss">
@@ -232,7 +283,29 @@
   
 
   .come-to-school{
-    padding-left: 25px;
+    margin-left: 25.7px;
   }
-  
+
+  .login{
+    margin-left: 130px;
+    display: flex;
+  }  
+
+  @media(max-width: 1400px){
+    .login{
+    margin-left: 30px;
+    }  
+  }
+  @media(max-width: 1200px){
+    .login{
+    display: none;
+    } 
+  }
+  @media(max-width: 990px){
+    .login{
+    display: block;
+    margin-left: 25.7px;
+    } 
+  }
+
 </style>

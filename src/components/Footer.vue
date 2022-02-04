@@ -131,7 +131,7 @@
               국크 이야기
             </h5>
 
-            <!-- <ul class="list-unstyled mb-0">
+            <ul class="list-unstyled mb-0">
               <li>
                 <RouterLink
                   :to="'/SchoolStory/SchoolNews'"
@@ -139,7 +139,7 @@
                   학교 소식
                 </RouterLink>
               </li>
-              <li>
+              <!-- <li>
                 <RouterLink
                   :to="'/SchoolStory/SchoolActivities'"
                   class="text-white nav-link">
@@ -152,8 +152,8 @@
                   class="text-white nav-link">
                   학생 마당
                 </RouterLink>
-              </li>
-            </ul> -->
+              </li> -->
+            </ul>
           </div>
         </div>
       </section>

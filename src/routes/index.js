@@ -17,7 +17,12 @@ import RecruitmentGuide from './AdmissionGuide/RecruitmentGuide'
 //fourth Page
 // import NoticeBoard from './SchoolStory/NoticeBoard'
 // import SchoolActivities from './SchoolStory/SchoolActivities'
-// import SchoolNews from './SchoolStory/SchoolNews'
+import SchoolNews from './SchoolStory/SchoolNews'
+//auth
+import LoginPage from './auth/Login'
+import RegisterPage from './auth/Register'
+
+
 //roadMap Page
 import RoadMap from './Map'
 //404 Page
@@ -82,17 +87,26 @@ export default createRouter({
         //     path: '/SchoolStory/SchoolActivities',
         //     component: SchoolActivities
         // },
-        // {
-        //     path: '/SchoolStory/SchoolNews',
-        //     component: SchoolNews
-        // },
+        {
+            path: '/SchoolStory/SchoolNews',
+            component: SchoolNews
+        },
         {
             path: '/RoadMap',
             component: RoadMap
         },
         {
+            path: '/auth/Login',
+            component: LoginPage
+        },
+        {
+            path: '/auth/Register',
+            component: RegisterPage
+        },
+        {
             path: '/:notFound(.*)',
             component: NotFound
-        }
+        },
+        
     ]
 });
