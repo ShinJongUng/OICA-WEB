@@ -2,7 +2,15 @@
   <div class="container-md">
     <h1>회원가입</h1>
 
-    <form>
+    <form @submit.prevent="userRegistration">
+      <div class="mb-3">
+        <label
+          class="form-label">이름</label>
+        <input
+          type="name"
+          class="form-control"
+          v-model="user.name" />
+      </div>
       <div class="mb-3">
         <label
           class="form-label">이메일 주소</label>
@@ -10,7 +18,7 @@
           type="email"
           name="email"
           class="form-control"
-          v-model="email" />
+          v-model="user.email" />
         <div
           id="emailHelp"
           class="form-text">
@@ -23,11 +31,10 @@
         <input
           type="password"
           class="form-control"
-          v-model="password" />
+          v-model="user.password" />
       </div>
       <button
         @click="register"
-        type="submit"
         class="btn btn-primary">
         회원가입
       </button>
@@ -35,49 +42,43 @@
   </div>
 </template>
 
-<script setup>
-  import { ref } from 'vue'
-  import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-  import { useRouter } from 'vue-router'
-  const email = ref('')
-  const password = ref('')
-  const auth = getAuth();
-  const router = useRouter();
-  const errMsg = ref()
-  const register = () =>{
-  createUserWithEmailAndPassword(auth, email.value, password.value)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    alert('정상적으로 가입 되셨습니다.');
-    router.push('/auth/login')
-  })
-  .catch((error) => {
-    switch (error.code) {
-          case 'auth/invalid-email':
-              errMsg.value = '잘못된 이메일 형식 입니다.'
-              break
-          case 'auth/user-not-found':
-              errMsg.value = '이메일 주소를 확인 해주세요'
-              break
-          case 'auth/weak-password':
-              errMsg.value = '안전한 비밀번호로 만들어주세요'
-              break
-          case 'auth/too-many-requests':
-              errMsg.value = '접속 시도를 너무 많이 하셨습니다.'
-              break
-          case 'auth/email-already-in-use':
-              errMsg.value = '이미 존재하는 이메일 계정입니다.'
-              break
-          default:
-              errMsg.value = error.code;
-              break
-        }
-    alert(errMsg.value);
-    console.log(error.code)
-    // ..
-  });
+
+<script>
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+export default {
+  data() {
+    return{
+      user: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+  methods: {
+    userRegistration() {
+      createUserWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
+      .then((res) => {
+      updateProfile(getAuth().currentUser, {
+        displayName: this.user.name
+        }).then(() => {
+          alert('정상 가입 되셨습니다.');
+          this.$router.push('/')
+          
+          })
+          .catch((error) => {
+            alert(error.message);
+        });
+      })
+      .catch((error) => {
+        alert(error.message);
+        
+      });
+    }
   }
+}
 </script>
+
+
 
 
 

@@ -137,7 +137,20 @@
 
           <li
             class="nav-item login"
-            v-if="user == null">
+            v-if="user">
+            <div class="user_name nav-link">
+              {{ user.displayName }}
+            </div>
+            <RouterLink
+              to="/"
+              class="nav-link"
+              @click="signOut()">
+              로그아웃
+            </RouterLink>
+          </li>
+          <li
+            class="nav-item login"
+            v-else-if="user == null">
             <RouterLink
               to="/auth/Register"
               class="nav-link">
@@ -147,19 +160,6 @@
               to="/auth/login"
               class="nav-link">
               로그인
-            </RouterLink>
-          </li>
-          <li
-            class="nav-item login"
-            v-else>
-            <div class="user_name nav-link">
-              이름 님
-            </div>
-            <RouterLink
-              to="/"
-              class="nav-link"
-              @click="signOut()">
-              로그아웃
             </RouterLink>
           </li>
         </ul>
@@ -242,7 +242,7 @@ import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
           //   href: '/SchoolStory/NoticeBoard'
           // }
         ],
-        user:null
+        user: false
       }
     },
     created() {
