@@ -169,7 +169,6 @@
 </template> 
 
 <script>
-import { useRouter } from 'vue-router'
 import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
   export default {
     data() {
@@ -231,7 +230,8 @@ import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
           fourth_menu: [
           {
             name: '학교 소식',
-            href: '/SchoolStory/SchoolNews'
+            // href: '/SchoolStory/SchoolNews'
+            href: '/board/BoardList'
           },
           // {
           //   name: '학교 활동',

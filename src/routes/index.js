@@ -21,6 +21,10 @@ import SchoolNews from './SchoolStory/SchoolNews'
 //auth
 import LoginPage from './auth/Login'
 import RegisterPage from './auth/Register'
+//board
+import BoardAdd from './board/BoardAdd'
+import BoardList from './board/BoardList'
+
 
 
 //roadMap Page
@@ -102,6 +106,14 @@ export default createRouter({
         {
             path: '/auth/Register',
             component: RegisterPage
+        },
+        {
+            path: '/board/BoardList',
+            component: BoardList
+        },
+        {
+            path: '/board/BoardAdd',
+            component: BoardAdd
         },
         {
             path: '/:notFound(.*)',
