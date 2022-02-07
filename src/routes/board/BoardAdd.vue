@@ -7,7 +7,7 @@
         </h3>
         <form @submit.prevent="onFormSubmit">
           <div class="form-group">
-            <label>작성자</label>
+            <label class="form-label">작성자</label>
             <input
               type="text"
               class="form-control"
@@ -15,7 +15,7 @@
               required />
           </div>
           <div class="form-group">
-            <label>제목</label>
+            <label class="form-label">제목</label>
             <input
               type="text"
               class="form-control"
@@ -23,7 +23,7 @@
               required />
           </div>
           <div class="form-group">
-            <label>내용</label>
+            <label class="form-label">내용</label>
             <input
               type="text"
               class="form-control"
@@ -68,3 +68,9 @@
         }
     }
 </script>
+
+<style scoped>
+  .btn{
+    margin-top: 10px;
+  }
+</style>
