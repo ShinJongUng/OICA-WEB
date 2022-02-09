@@ -2,7 +2,7 @@
 
 
 ## LINK
-[OICAWEB](https://onnuri-academy.web.app//)
+[OICAWEB](https://onnuri-academy.web.app/)
 
 ## HITS
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FShinJongUng%2FOICA-WEB&count_bg=%233533BA&title_bg=%23555555&icon=&icon_color=%23A84949&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
@@ -14,7 +14,6 @@
 <img alt="eslint" src ="https://img.shields.io/badge/ESLint-4B32C3.svg?&style=for-the-badge&logo=ESLint&logoColor=white"/>
 <img alt="Netlify" src ="https://img.shields.io/badge/Netlify-00C7B7.svg?&style=for-the-badge&logo=Netlify&logoColor=white"/>
 <img alt="firebase" src ="https://img.shields.io/badge/firebase-FFCA28.svg?&style=for-the-badge&logo=Firebase&logoColor=white"/></span>
-<br/>
 <br/>
 <br/>
 
