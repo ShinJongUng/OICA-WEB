@@ -229,7 +229,7 @@ import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
         ],
           fourth_menu: [
           {
-            name: '학교 소식',
+            name: '학생 게시판',
             // href: '/SchoolStory/SchoolNews'
             href: '/board/BoardList'
           },

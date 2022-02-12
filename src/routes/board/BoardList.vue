@@ -1,5 +1,9 @@
 <template>
   <div class="container-md">
+    <div class="main-title">
+      학생 게시판
+    </div>
+    <hr />
     <RouterLink
       :to="'/board/BoardAdd'"
       class="btn btn-secondary">
@@ -65,7 +69,21 @@
         }
     }
 </script>
-<style>
+<style lang="scss" scoped>
+
+.container-md{
+    font-family: 'Nanum Gothic', sans-serif;
+    .main-title{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }
+    hr{
+      margin-bottom: 60px;
+    }
+}
     .btn-secondary {
         margin-top: 40px;
         margin-bottom: 20px;

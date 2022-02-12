@@ -10,7 +10,7 @@
             <label class="form-label">작성자</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control disable"
               v-model="board.author"
               required />
           </div>
@@ -43,7 +43,27 @@
 <script>
     import { db } from '../../firebaseConfig';
     import { collection, addDoc } from "firebase/firestore";
+  import { getAuth, onAuthStateChanged  } from "firebase/auth";
+
     export default {
+      created() {
+        onAuthStateChanged(getAuth(), (user) => {
+        if (user) {
+        this.user = user
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+    // ...
+      } else {
+      this.user = null;
+      alert('글 작성은 로그인 후 이용 가능합니다.');
+      this.$router.push('/board/BoardList');
+      
+    // User is signed out
+    // ...
+        }
+      });
+    },
         data() {
             return {
                 board: {
@@ -62,14 +82,15 @@
                 alert('정상 작성 되었습니다.');
                 this.$router.push('/board/BoardList');
               } catch (e) {
-                alert.error("Error adding document: ", e);
+                alert("Error adding document: ", e);
               }
             }
         }
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
   .btn{
     margin-top: 10px;
   }

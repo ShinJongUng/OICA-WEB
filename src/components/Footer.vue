@@ -134,9 +134,9 @@
             <ul class="list-unstyled mb-0">
               <li>
                 <RouterLink
-                  :to="'/SchoolStory/SchoolNews'"
+                  :to="'/board/BoardList'"
                   class="text-white nav-link">
-                  학교 소식
+                  학생 게시판
                 </RouterLink>
               </li>
               <!-- <li>
