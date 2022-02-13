@@ -1,18 +1,20 @@
 <template>
   <div class="container-md">
+    <div class="main-title">
+      글 작성
+    </div>
+    <hr />
     <div class="row justify-content-center">
       <div class="col-md-5">
-        <h3 class="text-center">
-          글 쓰기
-        </h3>
         <form @submit.prevent="onFormSubmit">
           <div class="form-group">
             <label class="form-label">작성자</label>
             <input
               type="text"
-              class="form-control disable"
-              v-model="board.author"
-              required />
+              class="form-control"
+              v-model="user.displayName"
+              required 
+              disabled />
           </div>
           <div class="form-group">
             <label class="form-label">제목</label>
@@ -24,11 +26,10 @@
           </div>
           <div class="form-group">
             <label class="form-label">내용</label>
-            <input
-              type="text"
+            <textarea
               class="form-control"
               v-model="board.contents"
-              required />
+              rows="5"></textarea>
           </div>
           <div class="form-group">
             <button class="btn btn-primary btn-block">
@@ -67,7 +68,8 @@
         data() {
             return {
                 board: {
-                }
+                },
+                user: null
             }
         },
         methods: {
@@ -75,7 +77,7 @@
                 event.preventDefault()
                   try {
                     const docRef = await addDoc(collection(db, "boards"), {
-                    author: this.board.author,
+                    author: this.user.displayName,
                     title: this.board.title,
                     contents: this.board.contents
                   });
@@ -94,4 +96,17 @@
   .btn{
     margin-top: 10px;
   }
+  .container-md{
+    font-family: 'Nanum Gothic', sans-serif;
+    .main-title{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }
+    hr{
+      margin-bottom: 60px;
+    }
+}
 </style>
