@@ -5,6 +5,7 @@
     </div>
     <hr />
     <RouterLink
+      v-if="user !== null"
       :to="'/board/BoardAdd'"
       class="btn btn-secondary">
       글 작성
@@ -36,6 +37,7 @@
 <script>
     import { db } from '../../firebaseConfig';
     import { collection, onSnapshot  } from "firebase/firestore";
+    import { getAuth, onAuthStateChanged  } from "firebase/auth";
     export default {
         data() {
             return {
@@ -53,7 +55,16 @@
                   contents: doc.data().contents
                 })
               })
-            })
+            }),
+            onAuthStateChanged(getAuth(), (user) => {
+              if (user) {
+              this.user = user
+            const uid = user.uid;
+    // ...
+            } else {
+            this.user = null;
+            }
+          });
         },
         methods: {
             // deleteUser(id){
@@ -66,7 +77,7 @@
             //     })
             //   }
             // }
-        }
+      }
     }
 </script>
 <style lang="scss" scoped>
