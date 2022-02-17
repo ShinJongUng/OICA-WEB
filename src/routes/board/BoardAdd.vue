@@ -1,7 +1,7 @@
 <template>
   <div class="container-md">
     <div class="main-title">
-      글 작성
+      글 쓰기
     </div>
     <hr />
     <div class="row justify-content-center">
