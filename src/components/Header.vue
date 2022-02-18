@@ -263,7 +263,7 @@ import { getAuth, onAuthStateChanged, signOut  } from "firebase/auth";
     methods: {
       signOut(){
         signOut(getAuth()).then(() => {
-          this.$router.go();
+          this.$router.push('/');
         }).catch((error) => {
           console.log(error)
       });

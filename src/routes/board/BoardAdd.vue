@@ -1,7 +1,7 @@
 <template>
   <div class="container-md">
     <div class="main-title">
-      글 작성
+      글 쓰기
     </div>
     <hr />
     <div class="row justify-content-center">
@@ -12,6 +12,7 @@
             <input
               type="text"
               class="form-control"
+              v-if="user !==null"
               v-model="user.displayName"
               required 
               disabled />
@@ -59,6 +60,7 @@
       this.user = null;
       alert('글 작성은 로그인 후 이용 가능합니다.');
       this.$router.push('/board/BoardList');
+      
       
     // User is signed out
     // ...
