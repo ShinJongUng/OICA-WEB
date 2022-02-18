@@ -63,6 +63,7 @@
               errMsg.value = '접속 시도를 너무 많이 하셨습니다.'
               break
           default:
+            console.log(error.code)
               errMsg.value = '이메일 혹은 비밀번호가 틀렸습니다.'
               break
         }
