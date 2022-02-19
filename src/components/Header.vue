@@ -3,7 +3,7 @@
     <div class="container-md">
       <a
         class="navbar-brand"
-        href="#">
+        href="/">
         <img
           src="../assets/logo_header.png"
           alt=""
