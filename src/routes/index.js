@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './Home'
 //first Page
 import PastorGreeting from './SchoolIntroduction/PastorGreeting';
@@ -34,7 +34,7 @@ import NotFound from './NotFound'
 
 export default createRouter({
     //hash mode or history
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes: [{
         path: '/',
         component: Home
